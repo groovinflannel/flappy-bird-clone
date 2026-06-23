@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bfo34blrevkkj" path="res://scenes/pipe.gd" id="1_arpqm"]
 
 [node name="Pipe" type="AnimatableBody2D" unique_id=1894122042]
+scale = Vector2(2, 2)
 script = ExtResource("1_arpqm")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=775386486]
