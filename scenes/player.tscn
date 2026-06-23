@@ -18,3 +18,6 @@ texture = ExtResource("2_g2els")
 position = Vector2(10, -12)
 rotation = 3.403392
 shape = SubResource("CapsuleShape2D_g2els")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=248519408]
+zoom = Vector2(0.7, 0.7)
