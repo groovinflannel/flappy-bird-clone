@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 const SPEED = 3.0
 const MAX_SPEED = 5.0
@@ -16,6 +17,7 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and !is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		animation_player.play("flapping")
 
 	# Handle constant rightward movement
 	velocity.x += SPEED
