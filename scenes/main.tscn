@@ -9,9 +9,10 @@
 script = ExtResource("1_0wfyh")
 
 [node name="Player" parent="." unique_id=2017750289 instance=ExtResource("1_o5qli")]
-position = Vector2(166, 152)
+position = Vector2(52, 339)
 
 [node name="Ground" parent="." unique_id=1124207220 instance=ExtResource("3_sugp2")]
+position = Vector2(-3, 691)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=283931975]
 z_index = -1

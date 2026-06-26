@@ -1,11 +1,26 @@
 [gd_scene format=3 uid="uid://bgpf4jpg3h0rx"]
 
-[ext_resource type="Texture2D" uid="uid://dpsvcnh6rb88m" path="res://assets/ground.png" id="1_pybca"]
+[ext_resource type="Script" uid="uid://ccvgutr3v1da0" path="res://scripts/ground.gd" id="1_pybca"]
+[ext_resource type="Texture2D" uid="uid://dpsvcnh6rb88m" path="res://assets/ground.png" id="2_mi8v4"]
 
-[node name="Parallax2D" type="Parallax2D" unique_id=1233510325]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mi8v4"]
+size = Vector2(367.25, 110.125)
 
-[node name="Ground" type="Sprite2D" parent="." unique_id=1877404218]
-position = Vector2(627.5, -1809.9065)
-scale = Vector2(20.578123, 3.5312502)
-texture = ExtResource("1_pybca")
-offset = Vector2(0, 685)
+[node name="Ground" type="StaticBody2D" unique_id=395514751]
+script = ExtResource("1_pybca")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=369371808]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1357281846]
+texture_repeat = 2
+position = Vector2(1.9999999, -106)
+scale = Vector2(5.765625, 3.390625)
+texture = ExtResource("2_mi8v4")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 800, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1473333986]
+visible = false
+position = Vector2(186.375, 56.9375)
+shape = SubResource("RectangleShape2D_mi8v4")
