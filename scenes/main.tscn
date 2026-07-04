@@ -2,21 +2,25 @@
 
 [ext_resource type="Script" uid="uid://dhi4jyt7kaynp" path="res://scenes/main.gd" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://bb4ai2fy83nu7" path="res://scenes/player.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://kjkat2s5d5mf" path="res://scenes/obstacle_spawner.tscn" id="2_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://bgpf4jpg3h0rx" path="res://scenes/ground.tscn" id="3_sugp2"]
 [ext_resource type="Texture2D" uid="uid://bguinkoajf7rb" path="res://assets/background.png" id="4_jyhfs"]
 
 [node name="Main" type="Node2D" unique_id=1231637308]
 script = ExtResource("1_0wfyh")
 
-[node name="Player" parent="." unique_id=2017750289 instance=ExtResource("1_o5qli")]
-position = Vector2(52, 339)
+[node name="ObstacleSpawner" parent="." unique_id=598730816 instance=ExtResource("2_tbgi4")]
+position = Vector2(700, 400)
 
 [node name="Ground" parent="." unique_id=1124207220 instance=ExtResource("3_sugp2")]
 position = Vector2(-3, 691)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=283931975]
 z_index = -1
-scale = Vector2(2.8203127, 6.2578125)
+scale = Vector2(4, 6.2578125)
 texture = ExtResource("4_jyhfs")
 centered = false
 metadata/_edit_lock_ = true
+
+[node name="Player" parent="." unique_id=2017750289 instance=ExtResource("1_o5qli")]
+position = Vector2(52, 339)

@@ -55,3 +55,4 @@ shape = SubResource("RectangleShape2D_oxlcy")
 
 [connection signal="body_entered" from="PipeTop" to="." method="_on_pipe_body_entered"]
 [connection signal="body_entered" from="PipeBottom" to="." method="_on_pipe_body_entered"]
+[connection signal="body_entered" from="ScoreArea" to="." method="_on_score_area_body_entered"]
